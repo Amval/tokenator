@@ -22,7 +22,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+tokenizer = Tokenator.new
+
+tokenizer.tokenize "This? It's just a basic example!"
+# => ["This", "It", "is", "just", "a", "basic", "example"]
+
+tokenizer.tokenize "This? It's just a basic example!", {:remove_punctuation => false}
+# => ["This", "?", "It", "is", "just", "a", "basic", "example", "!"]
+
+```
 
 ## Development
 
