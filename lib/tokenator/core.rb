@@ -75,8 +75,11 @@ class PTB
       s.gsub!(/\.\.\./, '')
       s.gsub!(/ \./, ' ')
       s.gsub!(/- /, ' ')
+      s.gsub!(/["`'][^\w]/, ' ')
+      s.gsub!(/"$/, ' ')
     end
     s.split(/\s+/)
   end
 
 end
+
